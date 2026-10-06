@@ -7,9 +7,7 @@
 </p>
 
 <p align="center">
-  <video src="assets/teaser.mp4" controls autoplay muted loop playsinline width="800">
-    <a href="assets/teaser.mp4">Watch the EVA teaser video</a>
-  </video>
+  <img src="assets/teaser.png" alt="EVA teaser" width="800">
 </p>
 
 Official PyTorch implementation of EVA.
