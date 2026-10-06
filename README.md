@@ -1,4 +1,4 @@
-# Empirical Variational Autoencder
+# Empirical Variational Autoencoder
 
 <p align="center">
   <a href="https://arxiv.org/abs/2610.06545"><img src="https://img.shields.io/badge/arXiv-2610.06545-555555?logo=arxiv&logoColor=B31B1B" alt="arXiv"></a>
