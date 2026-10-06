@@ -1,0 +1,17 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: train
+
+model:
+  size: large
+  reparam_dim: 128
+
+train:
+  amp_dtype: bf16
+
+paths:
+  cached_path: data/imagenet/latents/train
+  output_dir: outputs/imagenet/eva_large_d128

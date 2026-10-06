@@ -1,0 +1,14 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: evaluate
+
+paths:
+  samples_path: outputs/imagenet/eva_small_d128_reconstruct/reconstructions
+  reference_path: outputs/imagenet/eva_small_d128_reconstruct/targets
+  output_dir: outputs/imagenet/eva_small_d128_reconstruct/metrics
+
+metrics:
+  kind: reconstruction

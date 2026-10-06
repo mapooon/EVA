@@ -1,0 +1,20 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: generate
+
+model:
+  size: base
+  reparam_dim: 128
+
+paths:
+  checkpoint: checkpoints/eva_vggsound_base_d128/model.safetensors
+  output_dir: outputs/vggsound/eva_base_d128_generate
+
+generation:
+  batch_size: 16
+  num_samples: 15446
+  guidance_scale: 10.0
+  amp_dtype: bf16

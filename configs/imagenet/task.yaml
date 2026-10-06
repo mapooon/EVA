@@ -1,0 +1,4 @@
+task: imagenet
+
+paths:
+  tokenizer_path: pretrained_models/vae/kl16.ckpt

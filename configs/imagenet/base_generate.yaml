@@ -1,0 +1,17 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: generate
+
+model:
+  size: base
+  reparam_dim: 128
+
+paths:
+  checkpoint: _dev/release/eva-imagenet-base-128-ema/model.safetensors
+  output_dir: outputs/imagenet/eva_base_d128_generate
+
+generation:
+  guidance_scale: 7.0

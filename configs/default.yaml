@@ -1,0 +1,43 @@
+train:
+  epochs: 400
+  batch_size: 64
+  base_lr: 1.0e-4
+  warmup_epochs: 50
+  weight_decay: 0.02
+  grad_clip: 3.0
+  amp_dtype: fp16
+  grad_checkpointing: false
+
+checkpoint:
+  save_frequency: 50
+  use_ema: true
+  ema_rate: 0.9999
+
+generation:
+  batch_size: 64
+  num_samples: 50000
+  guidance_scale: 1.0
+  temperature: 1.0
+  amp_dtype: fp16
+
+reconstruction:
+  batch_size: 64
+  num_samples: null
+  amp_dtype: fp16
+
+metrics:
+  kind: generation
+
+runtime:
+  device: cuda
+  seed: 1
+  num_workers: 10
+  pin_memory: true
+  dist_url: env://
+
+paths:
+  resume: null
+  fid_stats_path: null
+  is_model_path: null
+  samples_path: null
+  reference_path: null

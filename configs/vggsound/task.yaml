@@ -1,0 +1,6 @@
+task: vggsound
+
+tokenizer:
+  model_id: stabilityai/stable-audio-open-1.0
+  subfolder: vae
+  revision: null

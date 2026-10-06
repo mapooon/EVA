@@ -1,0 +1,17 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: train
+
+model:
+  size: small
+  reparam_dim: 128
+
+paths:
+  cached_path: data/vggsound/latents/train
+  output_dir: outputs/vggsound/eva_small_d128
+
+train:
+  amp_dtype: bf16

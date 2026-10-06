@@ -1,0 +1,19 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: cache
+
+paths:
+  data_path: data/vggsound/wav
+  cached_path: data/vggsound/latents
+
+cache:
+  split: train
+  batch_size: 8
+  num_workers: 8
+  skip_existing: true
+  amp_dtype: fp32
+  sample_rate: 44100
+  audio_channels: 2

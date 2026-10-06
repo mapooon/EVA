@@ -1,0 +1,19 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: reconstruct
+
+model:
+  size: base
+  reparam_dim: 128
+
+paths:
+  checkpoint: checkpoints/eva_vggsound_base_d128/model.safetensors
+  cached_path: data/vggsound/latents/test
+  output_dir: outputs/vggsound/eva_base_d128_reconstruct
+
+reconstruction:
+  batch_size: 16
+  amp_dtype: bf16

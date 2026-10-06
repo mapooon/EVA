@@ -1,0 +1,18 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: reconstruct
+
+model:
+  size: base
+  reparam_dim: 128
+
+paths:
+  checkpoint: checkpoints/eva_imagenet_base_d128/model.safetensors
+  data_path: data/imagenet/test
+  output_dir: outputs/imagenet/eva_base_d128_reconstruct
+
+reconstruction:
+  num_samples: 50000

@@ -1,0 +1,11 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: evaluate
+
+paths:
+  samples_path: outputs/imagenet/eva_base_d128_generate/samples
+  output_dir: outputs/imagenet/eva_base_d128_generate/metrics
+  fid_stats_path: fid_stats/adm_in256_stats.npz

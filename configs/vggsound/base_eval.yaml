@@ -1,0 +1,12 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: evaluate
+
+paths:
+  samples_path: outputs/vggsound/eva_base_d128_generate/samples
+  output_dir: outputs/vggsound/eva_base_d128_generate/metrics
+  fid_stats_path: data/vggsound/fid_stats/vggsound_test_vggish_stats.npz
+  is_model_path: pretrained_models/vggsound/H.pth.tar

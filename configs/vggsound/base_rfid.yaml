@@ -1,0 +1,14 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: evaluate
+
+paths:
+  samples_path: outputs/vggsound/eva_base_d128_reconstruct/reconstructions
+  output_dir: outputs/vggsound/eva_base_d128_reconstruct/metrics
+  fid_stats_path: data/vggsound/fid_stats/vggsound_test_vggish_stats.npz
+
+metrics:
+  kind: reconstruction

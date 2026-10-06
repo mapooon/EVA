@@ -1,0 +1,29 @@
+name: eva
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+dependencies:
+  - python=3.11.10
+  # Core versions match the environment used for the original experiments.
+  - pytorch=2.5.1
+  - torchvision=0.20.1
+  - torchaudio=2.5.1
+  - pytorch-cuda=12.1
+  - numpy=2.4.6
+  - scipy=1.16.1
+  - pillow=10.2.0
+  - pyyaml
+  # The conda package is named pysoundfile; it is imported as soundfile in Python.
+  - pysoundfile=0.12.1
+  - tensorboard=2.11.2
+  # TensorBoard 2.11.x is incompatible with protobuf 4+ at import time.
+  - protobuf<4
+  - tqdm
+  - pip
+  - pip:
+      - diffusers==0.35.1
+      - huggingface-hub==0.34.4
+      - safetensors==0.6.2
+      - torch-fidelity @ git+https://github.com/LTH14/torch-fidelity.git@bfe72b995473e4fee9351705d7b005f17442a4ca
+      - pytest

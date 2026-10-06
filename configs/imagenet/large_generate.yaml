@@ -1,0 +1,17 @@
+defaults:
+  - ../default.yaml
+  - task.yaml
+
+run:
+  mode: generate
+
+model:
+  size: large
+  reparam_dim: 64
+
+paths:
+  checkpoint: checkpoints/eva-imagenet-large-64-ema/model.safetensors
+  output_dir: outputs/imagenet/eva_large_d64_generate
+
+generation:
+  guidance_scale: 7.0
