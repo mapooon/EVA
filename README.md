@@ -36,12 +36,11 @@ training.
 The architecture is selected only by `model.size`. Individual width, depth, and head-count
 overrides are intentionally unsupported.
 
-| Size | Width | Encoder depth | Decoder depth | Heads |
-|---|---:|---:|---:|---:|
-| EVA-Small | 512 | 8 | 8 | 8 |
-| EVA-Base | 768 | 12 | 12 | 12 |
-| EVA-Large | 1024 | 16 | 16 | 16 |
-| EVA-Huge | 1280 | 20 | 20 | 16 |
+| Size | Width | Encoder depth | Decoder depth | Heads | ImageNet | VGGSound
+|---|---:|---:|---:|---:|---:|---:|
+| EVA-Small | 512 | 8 | 8 | 8 | [64 lat](https://huggingface.co/mapooon/eva-imagenet-small-64-ema) | - |
+| EVA-Base | 768 | 12 | 12 | 12 | [64 lat](https://huggingface.co/mapooon/eva-imagenet-base-64-ema) / [128 lat](https://huggingface.co/mapooon/eva-imagenet-base-128-ema) | [128 lat](https://huggingface.co/mapooon/eva-vggsound-base-128-ema) |
+| EVA-Large | 1024 | 16 | 16 | 16 | [64 lat](https://huggingface.co/mapooon/eva-imagenet-large-64-ema) | - | 
 
 All variants use four register tokens, RoPE, full encoder attention, a causal decoder,
 per-dimension prior variance, and L2 reconstruction loss. `model.reparam_dim` is the only
@@ -52,9 +51,6 @@ The training objective is
 ```text
 L = L_reconstruction + KL(q(z_t | x, y) || p(z_t | z_<t, y)).
 ```
-
-There is no KL term against a fixed standard normal distribution. Posterior and prior
-log-variances are clamped to `[-10, 10]`.
 
 
 ## Installation
