@@ -154,10 +154,6 @@ torchrun --nproc_per_node=8 --nnodes=1 main_eva.py \
   --config configs/imagenet/base.yaml
 ```
 
-The released EVA-Small architecture is available through `configs/imagenet/small.yaml`.
-EVA-Small always means the ImageNet definition (width 512, depth 8), including when it is
-used for VGGSound. 
-
 Train EVA-Base on VGGSound:
 
 ```bash
