@@ -247,3 +247,14 @@ This implementation builds on the repository structure and training utilities of
 [MAR](https://github.com/LTH14/mar). The ImageNet tokenizer implementation is derived from
 the KL-VAE in [Latent Diffusion](https://github.com/CompVis/latent-diffusion). VGGSound uses
 the VAE released with [Stable Audio Open](https://huggingface.co/stabilityai/stable-audio-open-1.0).
+The pretrained ImageNet KL-16 VAE checkpoint used here is the checkpoint distributed by MAR.
+
+## License
+
+The EVA source code is released under the MIT License. This repository contains code derived
+from [MAR](https://github.com/LTH14/mar); the original MAR copyright notice is retained in
+[LICENSE](LICENSE). See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for third-party
+provenance and license information.
+
+The ImageNet KL-16 VAE, Stable Audio Open VAE, datasets, and pretrained models are subject to
+their respective licenses and terms.
